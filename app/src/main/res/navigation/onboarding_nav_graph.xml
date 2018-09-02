@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/onboarding_nav_graph"
+    app:startDestination="@id/onboardingStep1Fragment">
+
+    <fragment
+        android:id="@+id/onboardingStep1Fragment"
+        android:name="io.github.ubuntudroid.nestednavigationsample.ui.onboarding.step1.OnboardingStep1Fragment"
+        android:label="onboarding_step1_fragment"
+        tools:layout="@layout/onboarding_step1_fragment" >
+        <action
+            android:id="@+id/action_onboardingStep1Fragment_to_onboardingStep2Fragment"
+            app:destination="@id/onboardingStep2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onboardingStep2Fragment"
+        android:name="io.github.ubuntudroid.nestednavigationsample.ui.onboarding.step2.OnboardingStep2Fragment"
+        android:label="onboarding_step2_fragment"
+        tools:layout="@layout/onboarding_step2_fragment" />
+</navigation>
